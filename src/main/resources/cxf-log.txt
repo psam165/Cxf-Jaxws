@@ -1,0 +1,47 @@
+2016-03-05 14:56:33.894:INFO::main: Logging initialized @1711ms
+2016-03-05 14:56:34.061:WARN:oejs.HomeBaseWarning:main: This instance of Jetty is not running from a separate {jetty.base} directory, this is not recommended.  See documentation at http://www.eclipse.org/jetty/documentation/current/startup.html
+2016-03-05 14:56:34.971:INFO:oejs.Server:main: jetty-9.3.7.v20160115
+2016-03-05 14:56:35.093:INFO:oejdp.ScanningAppProvider:main: Deployment monitor [file:///usr/local/jetty-distribution-9.3.7.v20160115/webapps/] at interval 1
+2016-03-05 14:56:38.831:INFO:Cxf-Jaxws:main: Initializing Spring root WebApplicationContext
+Mar 05, 2016 2:56:38 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+Mar 05, 2016 2:56:38 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.XmlWebApplicationContext@51b7e5df: display name [Root WebApplicationContext]; startup date [Sat Mar 05 14:56:38 EST 2016]; root of context hierarchy
+Mar 05, 2016 2:56:38 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+Mar 05, 2016 2:56:39 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+Mar 05, 2016 2:56:39 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+Mar 05, 2016 2:56:39 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+Mar 05, 2016 2:56:39 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@51b7e5df]: org.springframework.beans.factory.support.DefaultListableBeanFactory@c267ef4
+Mar 05, 2016 2:56:39 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c267ef4: defining beans [cxf,org.apache.cxf.bus.spring.BusApplicationListener,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.resource.ResourceManager,org.apache.cxf.configuration.Configurer,org.apache.cxf.binding.BindingFactoryManager,org.apache.cxf.transport.DestinationFactoryManager,org.apache.cxf.transport.ConduitInitiatorManager,org.apache.cxf.wsdl.WSDLManager,org.apache.cxf.phase.PhaseManager,org.apache.cxf.workqueue.WorkQueueManager,org.apache.cxf.buslifecycle.BusLifeCycleManager,org.apache.cxf.endpoint.ServerRegistry,org.apache.cxf.endpoint.ServerLifeCycleManager,org.apache.cxf.endpoint.ClientLifeCycleManager,org.apache.cxf.transports.http.QueryHandlerRegistry,org.apache.cxf.endpoint.EndpointResolverRegistry,org.apache.cxf.headers.HeaderManager,org.apache.cxf.catalog.OASISCatalogManager,org.apache.cxf.endpoint.ServiceContractResolverRegistry,org.apache.cxf.transport.servlet.ServletTransportFactory,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,greetService,Greet]; root of factory hierarchy
+Mar 05, 2016 2:56:40 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://service.cxf.javax/}GreetingServiceService from class javax.cxf.service.GreetingService
+Mar 05, 2016 2:56:40 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /Greet
+Mar 05, 2016 2:56:40 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 1812 ms
+Mar 05, 2016 2:56:40 PM org.apache.cxf.transport.servlet.CXFServlet updateContext
+INFO: Load the bus with application context
+Mar 05, 2016 2:56:40 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.apache.cxf.bus.spring.BusApplicationContext@1b73be9f: display name [org.apache.cxf.bus.spring.BusApplicationContext@1b73be9f]; startup date [Sat Mar 05 14:56:40 EST 2016]; parent: org.springframework.web.context.support.XmlWebApplicationContext@51b7e5df
+Mar 05, 2016 2:56:40 PM org.apache.cxf.bus.spring.BusApplicationContext getConfigResources
+INFO: No cxf.xml configuration file detected, relying on defaults.
+Mar 05, 2016 2:56:40 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.apache.cxf.bus.spring.BusApplicationContext@1b73be9f]: org.springframework.beans.factory.support.DefaultListableBeanFactory@626c44e7
+Mar 05, 2016 2:56:40 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@626c44e7: defining beans []; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@c267ef4
+Mar 05, 2016 2:56:40 PM org.apache.cxf.transport.servlet.AbstractCXFServlet replaceDestinationFactory
+INFO: Servlet transport factory already registered 
+2016-03-05 14:56:40.764:INFO:oejsh.ContextHandler:main: Started o.e.j.w.WebAppContext@4590c9c3{/Cxf-Jaxws,file:///tmp/jetty-0.0.0.0-8080-Cxf-Jaxws.war-_Cxf-Jaxws-any-610293268369398554.dir/webapp/,AVAILABLE}{/Cxf-Jaxws.war}
+2016-03-05 14:56:40.800:INFO:oejs.ServerConnector:main: Started ServerConnector@1acd810f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-03-05 14:56:40.800:INFO:oejs.Server:main: Started @8620ms
+Mar 05, 2016 3:00:19 PM org.apache.cxf.transport.servlet.ServletController invoke
+WARNING: Can't find the request for http://localhost:8080/Cxf-Jaxws//'s Observer 
+^C2016-03-05 15:01:29.369:INFO:oejs.ServerConnector:Thread-0: Stopped ServerConnector@1acd810f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-03-05 15:01:29.387:INFO:Cxf-Jaxws:Thread-0: Closing Spring root WebApplicationContext
+2016-03-05 15:01:29.488:INFO:oejsh.ContextHandler:Thread-0: Stopped o.e.j.w.WebAppContext@4590c9c3{/Cxf-Jaxws,null,UNAVAILABLE}{/Cxf-Jaxws.war}
