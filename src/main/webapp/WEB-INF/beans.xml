@@ -14,5 +14,9 @@ xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.spri
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" /> 
     
     <bean id="greetService" class="javax.cxf.service.GreetingService" />
-   <jaxws:endpoint implementor="#greetService" address="/Greet" id="Greet"></jaxws:endpoint>
+   <jaxws:endpoint implementor="#greetService" address="/Greet" id="Greet">
+   <!-- 	<jaxws:handlers>
+   		<bean id="lhandler" class="javax.cxf.service.handler.XMLValidatorHandler"/>
+   	</jaxws:handlers> -->
+   </jaxws:endpoint>
 </beans>
