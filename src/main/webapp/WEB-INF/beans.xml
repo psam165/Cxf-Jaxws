@@ -5,18 +5,31 @@ xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.spri
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
     
- <!--    <import resource="classpath:META-INF/cxf/cxf.xml" />
- 	<import resource="classpath:META-INF/cxf/cxf-extension-http.xml" />
- 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-  	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" /> -->
-    
+   
     <!-- Needed to avoid ServiceConstructionException: Could not resolve a binding for http://www.w3.org/2003/05/soap/bindings/HTTP/ -->
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" /> 
     
     <bean id="greetService" class="javax.cxf.service.GreetingService" />
    <jaxws:endpoint implementor="#greetService" address="/Greet" id="Greet">
    <!-- 	<jaxws:handlers>
-   		<bean id="lhandler" class="javax.cxf.service.handler.XMLValidatorHandler"/>
+   		<bean id="lhandler" class="javax.cxf.service.handler.SimpleLogicalHandler"/>
+   		<bean id="mhandler" class="javax.cxf.service.handler.HeaderHandler"/>
    	</jaxws:handlers> -->
+   	
+   	<jaxws:outInterceptors>
+   		<bean name="simple" class="javax.cxf.service.handler.HttpCxfInterceptor" />
+   	</jaxws:outInterceptors>
+   	
+   <!-- 	<jaxws:inInterceptors>
+   		<bean name="simple" class="javax.cxf.service.handler.HttpCxfInterceptor" />
+   	</jaxws:inInterceptors> -->
    </jaxws:endpoint>
+   
+   <bean id="timerWS" class="javax.cxf.service.TimeWebService" />
+   
+   <jaxws:endpoint address="/timer" implementor="#timerWS" id="timerService">
+   
+   </jaxws:endpoint>
+   
+   
 </beans>
