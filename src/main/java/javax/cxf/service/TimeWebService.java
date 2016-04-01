@@ -10,12 +10,14 @@ import java.util.TimeZone;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.ws.BindingType;
+import javax.xml.ws.soap.Addressing;
 
 import org.apache.log4j.Logger;
 
 @WebService
 //@BindingType(value="http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 @BindingType(value=javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)
+@Addressing(enabled=true,required=true)
 public class TimeWebService  implements TimeSEI
 {
 
