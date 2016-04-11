@@ -18,12 +18,14 @@ import org.apache.log4j.Logger;
 //@BindingType(value="http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 @BindingType(value=javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)
 @Addressing(enabled=true,required=true)
+
 public class TimeWebService  implements TimeSEI
 {
 
 	private static Logger log4j = Logger.getLogger(TimeWebService.class);
 	@Override
 	@WebMethod(action="simpleaction")
+	
 	public Date getDate() throws TimerException {
 		//throw new TimerException("Fault reason", "Fault details");
 		log4j.info("Getting Date");

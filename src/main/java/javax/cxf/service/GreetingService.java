@@ -4,18 +4,18 @@ package javax.cxf.service;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import javax.xml.ws.BindingType;
 
 import org.apache.log4j.Logger;
 
-@WebService
-@BindingType(value=javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)
 
-//@HandlerChain(file="/WEB-INF/jaxws-handler.xml")
+//@BindingType(value=javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)
+//@Addressing(enabled=true,required=true)
+@WebService
 public class GreetingService {
 	
 private static Logger log4j = Logger.getLogger(GreetingService.class);
 	
+	//@WebMethod(action="http://service.cxf.javax/Greet")
 	@WebMethod
 	@SOAPBinding
 	public String greet(){
@@ -23,8 +23,6 @@ private static Logger log4j = Logger.getLogger(GreetingService.class);
 		return "Hello World";
 	}
 
-	/*public static void main(String...strings){
-		Endpoint.publish("http://localhost:8080/Cxf-Jaxws/Greet", new GreetingService());
-	}*/
+	
 	
 }
